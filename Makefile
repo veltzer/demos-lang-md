@@ -54,7 +54,7 @@ debug:
 
 .PHONY: clean
 clean:
-	$(Q)rm $(FILES_PDF)
+	$(Q)rm $(ALL)
 
 .PHONY: clean_hard
 clean_hard:
