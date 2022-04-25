@@ -43,7 +43,7 @@ all: $(ALL)
 
 $(TOOLS): packages.txt config/deps.py
 	$(info doing $@)
-	$(Q)xargs -a packages.txt sudo apt-get install
+	$(Q)xargs -a packages.txt sudo apt-get -y install
 	$(Q)touch $@
 
 .PHONY: debug
