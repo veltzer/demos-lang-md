@@ -41,7 +41,7 @@ endif # DO_MKDBG
 all: $(ALL)
 	@true
 
-$(TOOLS):
+$(TOOLS): packages.txt config/deps.py
 	$(info doing $@)
 	$(Q)xargs -a packages.txt sudo apt-get install
 	$(Q)touch $@
