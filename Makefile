@@ -5,22 +5,13 @@
 DO_MKDBG?=0
 # should we convert md to pdf?
 DO_PDF=1
-# do you want to do tools?
-DO_TOOLS:=1
 
 ########
 # code #
 ########
 FILES_MD=$(shell find src -name "*.md")
 FILES_PDF=$(addprefix out/,$(addsuffix .pdf,$(basename $(FILES_MD))))
-TOOLS=tools.stamp
 ALL:=
-
-# tools
-ifeq ($(DO_TOOLS),1)
-.EXTRA_PREREQS+=$(TOOLS)
-ALL+=$(TOOLS)
-endif # DO_TOOLS
 
 ifeq ($(DO_PDF),1)
 ALL+=$(FILES_PDF)
@@ -40,11 +31,6 @@ endif # DO_MKDBG
 .PHONY: all
 all: $(ALL)
 	@true
-
-$(TOOLS): packages.txt config/deps.py
-	$(info doing $@)
-	$(Q)xargs -a packages.txt sudo apt-get -y install
-	$(Q)touch $@
 
 .PHONY: debug
 debug:
