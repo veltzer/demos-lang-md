@@ -4,8 +4,6 @@ package_name = config.project.project_name
 
 dev_requires = [
     "pymakehelper",
-    "pydmt",
-    "pyclassifiers",
 ]
 
 python_requires = ">=3.10"
