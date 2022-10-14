@@ -1,5 +1,5 @@
 packages=[
-    'pandoc',
-    'texlive',
-    'texlive-latex-extra',
+    "pandoc",
+    "texlive",
+    "texlive-latex-extra",
 ]
