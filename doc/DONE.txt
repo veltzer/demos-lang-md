@@ -1,0 +1,2 @@
+Do a makefile and generated pdf from the md files.
+did mdl verification of the markdown files.
