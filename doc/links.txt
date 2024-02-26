@@ -1,2 +1,4 @@
 Full references:
 	https://www.markdownguide.org/
+You can learn a lot from this example:
+	https://github.com/ajeetdsouza/zoxide/blob/main/README.md?plain=1
