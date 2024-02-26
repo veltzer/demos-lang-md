@@ -1,2 +1,4 @@
 Do a makefile and generated pdf from the md files.
 did mdl verification of the markdown files.
+Add markdownlint verification of the markdown files
+	https://github.com/DavidAnson/markdownlint

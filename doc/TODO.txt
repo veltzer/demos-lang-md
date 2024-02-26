@@ -1,2 +1,0 @@
-Add markdownlint verification of the markdown files
-	https://github.com/DavidAnson/markdownlint

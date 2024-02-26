@@ -7,6 +7,8 @@ DO_MKDBG?=0
 DO_PDF:=1
 # do you want to run mdl on md files?
 DO_MD_MDL:=1
+# do you want to run markdownlint on md files?
+DO_MD_MARKDOWNLINT:=1
 # do you want dependency on the Makefile itself ?
 DO_ALLDEP:=1
 
@@ -17,6 +19,7 @@ MD_SRC:=$(shell find src -type f -and -name "*.md")
 MD_BAS:=$(basename $(MD_SRC))
 MD_PDF:=$(addprefix out/,$(addsuffix .pdf,$(basename $(MD_SRC))))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
+MD_MARKDOWNLINT:=$(addprefix out/,$(addsuffix .markdownlint,$(MD_BAS)))
 ALL:=
 
 ifeq ($(DO_PDF),1)
@@ -26,6 +29,10 @@ endif # DO_PDF
 ifeq ($(DO_MD_MDL),1)
 ALL+=$(MD_MDL)
 endif # DO_MD_MDL
+
+ifeq ($(DO_MD_MARKDOWNLINT),1)
+ALL+=$(MD_MARKDOWNLINT)
+endif # DO_MD_MARKDOWNLINT
 
 ifeq ($(DO_MKDBG),1)
 Q=
@@ -53,6 +60,7 @@ debug:
 	$(info MD_BAS is $(MD_BAS))
 	$(info MD_PDF is $(MD_PDF))
 	$(info MD_MDL is $(MD_MDL))
+	$(info MD_MARKDOWNLINT is $(MD_MARKDOWNLINT))
 	$(info ALL is $(ALL))
 
 .PHONY: clean
@@ -73,5 +81,10 @@ $(MD_PDF): out/%.pdf: %.md
 $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)GEM_HOME=gems gems/bin/mdl $<
+	$(Q)mkdir -p $(dir $@)
+	$(Q)touch $@
+$(MD_MARKDOWNLINT): out/%.markdownlint: %.md .markdownlint.json
+	$(info doing [$@])
+	$(Q)node_modules/.bin/markdownlint -c .markdownlint.json $<
 	$(Q)mkdir -p $(dir $@)
 	$(Q)touch $@
