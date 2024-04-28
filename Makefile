@@ -71,6 +71,11 @@ clean:
 clean_hard:
 	$(Q)git clean -qffxd
 
+.PHONY: spell_many
+spell_many:
+	$(info doing [$@])
+	$(Q)aspell_many.sh $(MD_SRC)
+
 ############
 # patterns #
 ############
