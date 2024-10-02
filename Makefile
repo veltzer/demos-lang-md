@@ -3,14 +3,14 @@
 ##############
 # should we show commands executed ?
 DO_MKDBG?=0
+# do you want dependency on the Makefile itself ?
+DO_ALLDEP:=1
 # should we convert md to pdf?
 DO_PDF:=1
 # do you want to run mdl on md files?
 DO_MD_MDL:=1
 # do you want to run markdownlint on md files?
 DO_MD_MARKDOWNLINT:=1
-# do you want dependency on the Makefile itself ?
-DO_ALLDEP:=1
 
 ########
 # code #
@@ -41,11 +41,6 @@ else # DO_MKDBG
 Q=@
 #.SILENT:
 endif # DO_MKDBG
-
-# dependency on the makefile itself
-ifeq ($(DO_ALLDEP),1)
-.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
-endif # DO_ALLDEP
 
 #########
 # rules #
@@ -93,3 +88,10 @@ $(MD_MARKDOWNLINT): out/%.markdownlint: %.md .markdownlint.json
 	$(Q)node_modules/.bin/markdownlint -c .markdownlint.json $<
 	$(Q)mkdir -p $(dir $@)
 	$(Q)touch $@
+
+##########
+# alldep #
+##########
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP
