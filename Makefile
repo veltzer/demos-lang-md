@@ -81,13 +81,11 @@ $(MD_PDF): out/%.pdf: %.md
 $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)GEM_HOME=gems gems/bin/mdl $<
-	$(Q)mkdir -p $(dir $@)
-	$(Q)touch $@
+	$(Q)pymakehelper touch_mkdir $@
 $(MD_MARKDOWNLINT): out/%.markdownlint: %.md .markdownlint.json
 	$(info doing [$@])
 	$(Q)node_modules/.bin/markdownlint -c .markdownlint.json $<
-	$(Q)mkdir -p $(dir $@)
-	$(Q)touch $@
+	$(Q)pymakehelper touch_mkdir $@
 
 ##########
 # alldep #
