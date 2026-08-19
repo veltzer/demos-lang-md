@@ -1,0 +1,13 @@
+# Translated from the repo's pydmt-era markdown configs (.markdownlint.json
+# and .mdl.style.rb via .mdlrc): the demos are maintained against these rules
+# -- details.md demonstrates inline HTML, so MD033 is deliberately off, and
+# the other exclusions and the 4-space indent / long-line allowance carry
+# over verbatim. Rules the old configs never addressed stay on.
+[global]
+disable = ["MD022", "MD024", "MD026", "MD031", "MD032", "MD033", "MD034", "MD053"]
+
+[MD007]
+indent = 4
+
+[MD013]
+line-length = 1000

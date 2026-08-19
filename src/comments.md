@@ -3,10 +3,10 @@
 These are examples of comments in an markdown file.
 
 References:
-- [here](https://stackoverflow.com/questions/4823468/comments-in-markdown)
+- [Comments in Markdown (Stack Overflow)](https://stackoverflow.com/questions/4823468/comments-in-markdown)
 
 [//1]: <> (This is a comment, it will not be included)
-[//2]: <> (in  the output file unless you use it in)
+[//2]: <> (in the output file unless you use it in)
 [//3]: <> (a reference style link.)
 
 content 1
