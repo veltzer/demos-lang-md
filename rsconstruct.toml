@@ -22,6 +22,7 @@ src_dirs = ["tera.templates"]
 
 [processor.rumdl]
 src_dirs = ["src"]
+src_files = ["README.md"]
 
 [processor.zspell]
 src_dirs = ["src"]
@@ -54,3 +55,8 @@ system = [
 # lint the GitHub Actions workflow files with actionlint
 [processor.actionlint]
 src_dirs = [".github/workflows"]
+
+# ─── json ────────────────────────────────────────────────────────────────────
+
+[processor.ijsonlint]
+src_files = ["package.json"]
