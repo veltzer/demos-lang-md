@@ -1,11 +1,11 @@
 <!-- This file is generated. Do not edit it by hand: your changes will be
      lost on the next build. Edit the template it is rendered from, or the
      values that template reads, and build again. -->
-# *demos-md* project by Mark Veltzer
+# *demos-lang-md* project by Mark Veltzer
 
 description: Demos for the Markdown language
 
-project website: https://veltzer.github.io/demos-md
+project website: https://veltzer.github.io/demos-lang-md
 
 author: Mark Veltzer
 
@@ -15,11 +15,11 @@ version: 0.0.1
 
 ## github
 
-![License](https://img.shields.io/github/license/veltzer/demos-md)
+![License](https://img.shields.io/github/license/veltzer/demos-lang-md)
 
 ## build
 
-![build](https://github.com/veltzer/demos-md/workflows/build/badge.svg)
+![build](https://github.com/veltzer/demos-lang-md/workflows/build/badge.svg)
 
 ## contact me
 
