@@ -31,7 +31,7 @@ src_files = ["README.md"]
 [processor.checker.zspell]
 src_dirs = ["src"]
 
-[processor.checker.luacheck]
+[processor.checker.iluacheck]
 src_dirs = ["config"]
 
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
