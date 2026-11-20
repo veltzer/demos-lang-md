@@ -35,6 +35,8 @@ src_files = [".rumdl.toml", "rsconstruct.toml"]
 # scan src here). The pandoc processor produces the PDF; formats is pdf-only to
 # match the Makefile.
 [processor.generator.pandoc.md]
+# rspandoc, the Rust replacement: it takes pandoc's command line
+command = "rspandoc"
 src_dirs = ["src"]
 formats = ["pdf"]
 
