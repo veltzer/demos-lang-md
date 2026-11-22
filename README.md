@@ -5,7 +5,7 @@
 
 description: Demos for the Markdown language
 
-project website: https://veltzer.github.io/demos-lang-md
+project website: <https://veltzer.github.io/demos-lang-md>
 
 author: Mark Veltzer
 
