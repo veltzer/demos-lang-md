@@ -9,13 +9,16 @@ References:
 <!-- teaching: the unreferenced [//n]: <> definitions below are the comment idiom this page shows -->
 <!-- rumdl-disable-next-line MD053 -->
 [//1]: <> (This is a comment, it will not be included)
+<!-- teaching: the unreferenced definition below is the comment idiom this page shows -->
 <!-- rumdl-disable-next-line MD053 -->
 [//2]: <> (in the output file unless you use it in)
+<!-- teaching: the unreferenced definition below is the comment idiom this page shows -->
 <!-- rumdl-disable-next-line MD053 -->
 [//3]: <> (a reference style link.)
 
 content 1
 
+<!-- teaching: the unreferenced definition below is the comment idiom this page shows -->
 <!-- rumdl-disable-next-line MD053 -->
 [//4]: <> (This is also a comment.)
 
